@@ -1,3 +1,5 @@
+import Navbar from "@/components/Navbar";
+
 export const metadata = {
   title: 'My Podcast',
   description: 'Podcast Landing Page',
@@ -21,15 +23,7 @@ export const metadata = {
 export default function Home() {
   return (
     <div>
-      {/* Header */}
-      <header className="bg-gray-800 p-6 text-white">
-        <h1 className="text-3xl font-bold">Podcast Name</h1>
-        <nav>
-          <a href="#about" className="ml-4">About</a>
-          <a href="#episodes" className="ml-4">Episodes</a>
-          <a href="#subscribe" className="ml-4">Subscribe</a>
-        </nav>
-      </header>
+      <Navbar/>
 
       {/* Hero Section */}
       <section className="hero bg-blue-600 text-white p-12 text-center">
