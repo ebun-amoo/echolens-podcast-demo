@@ -19,7 +19,7 @@ const Navbar: React.FC = () => {
     ];
 
     return (
-        <nav className="flex flex-col md:flex-row md:justify-between bg-accent_white lg:mt-8 mb-4 md:items-center">
+        <nav className="font-sans flex flex-col md:flex-row md:justify-between bg-accent_white lg:mt-8 mb-4 md:items-center">
             <div className='flex flex-row justify-between'>
                 <div className="flex">
                     <Podcast color='#FF6D00' size={30}/>
@@ -46,17 +46,17 @@ const Navbar: React.FC = () => {
                             setActiveLink(link.href), 
                             setIsOpen(false)
                         }}
-                        className={`${
+                        className={`font-medium ${
                             activeLink === link.href
-                                ? 'text-main_orange font-medium'
-                                : 'text-accent_gray font-normal'
+                                ? 'text-main_orange'
+                                : 'text-accent_gray'
                         }`}
                     >
                         {link.label}
                     </Link>
                 ))}
             </div>
-            <div className={`md:space-x-3 space-y-3 md:space-y-0 flex md:flex-row flex-col md:block ${isOpen? 'block': 'hidden'}`}>
+            <div className={`font-medium md:space-x-3 space-y-3 md:space-y-0 flex md:flex-row flex-col md:block ${isOpen? 'block': 'hidden'}`}>
                 <button className='border-main_orange py-2 px-6 border text-main_orange rounded-md'>
                     Log In
                 </button>
